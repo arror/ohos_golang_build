@@ -29,3 +29,14 @@ jobs:
       run: |
         which go
         go env GOROOT
+
+    - name: 压缩并归档构建产物
+      run: |
+        cd go-source
+        zip -r go-build-artifacts.zip bin pkg
+      
+    - name: 上传构建产物
+      uses: actions/upload-artifact@v3
+      with:
+        name: go-build-artifacts
+        path: go-source/go-build-artifacts.zip
