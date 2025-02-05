@@ -6,9 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GOOS: linux
-      GOARCH: amd64
     
     steps:
     - name: 打印平台信息
