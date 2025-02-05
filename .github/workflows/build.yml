@@ -35,7 +35,7 @@ jobs:
       working-directory: go-source
       run: |
         cd src
-        GOOS=linux GOARCH=amd64 ./make.bash
+        GOOS=linux GOARCH=x86_64 ./make.bash
       
     - name: 配置 Go 环境变量
       run: |
